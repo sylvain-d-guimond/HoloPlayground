@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.bearlabs.slyholotools": "file:C:/Users/slysy/Documents/_Projects/_SlyHoloTools",
-    "com.bearlabs.slyunitytools": "file:C:/Users/slysy/Documents/_Projects/_SlyUnityTools",
+    "com.bearlabs.slyholotools": "file:C:/_GIT/SlyHoloTools",
+    "com.bearlabs.slyunitytools": "file:C:/_GIT/SlyUnityTools",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.6.0.tgz",
     "com.microsoft.mixedreality.toolkit.foundation": "file:MixedReality/com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz",
     "com.microsoft.mixedreality.toolkit.standardassets": "file:MixedReality/com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz",

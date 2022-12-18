@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.bearlabs.slyholotools": {
-      "version": "file:C:/Users/slysy/Documents/_Projects/_SlyHoloTools",
+      "version": "file:C:/_GIT/SlyHoloTools",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -9,7 +9,7 @@
       }
     },
     "com.bearlabs.slyunitytools": {
-      "version": "file:C:/Users/slysy/Documents/_Projects/_SlyUnityTools",
+      "version": "file:C:/_GIT/SlyUnityTools",
       "depth": 0,
       "source": "local",
       "dependencies": {}
