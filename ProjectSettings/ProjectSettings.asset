@@ -135,10 +135,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets:
-  - {fileID: 11400000, guid: 8b3a24c445f76534196b7bc24cab11c8, type: 2}
-  - {fileID: 1905920824317333563, guid: 23db74ce8db445240b9c5c344e2db70b, type: 2}
-  - {fileID: 6484680323582200707, guid: 3206bc849330bbe4495df30b9cc1446b, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -669,7 +666,8 @@ PlayerSettings:
       InternetClient: True
       WebCam: True
       Microphone: True
-  metroTargetDeviceFamilies: {}
+  metroTargetDeviceFamilies:
+    Holographic: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
