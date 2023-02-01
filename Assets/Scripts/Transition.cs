@@ -7,6 +7,7 @@ public class Transition : MonoBehaviour
     public float Smoothing;
     public float Delay;
 
+    [SerializeField]
     private bool _active;
     private float _startTime;
 

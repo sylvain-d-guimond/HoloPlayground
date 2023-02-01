@@ -63,7 +63,7 @@ public class FingerZap : MonoBehaviour
             }
 
             _effect.localScale = Vector3.one * TargetScale * (TargetDistance - (TargetDistance - Distance.Distance)) / TargetDistance;
-            Debug.Log($"Scale:{_effect.localScale}");
+            //Debug.Log($"Scale:{_effect.localScale}");
         }
     }
 }

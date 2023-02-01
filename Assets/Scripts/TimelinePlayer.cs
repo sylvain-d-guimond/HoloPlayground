@@ -26,11 +26,20 @@ public class TimelinePlayer : MonoBehaviour
         StartCoroutine(CoPlay(t));
     }
 
+    public void Play()
+    {
+        _director.timeUpdateMode = DirectorUpdateMode.GameTime;
+        _director.Play();
+    }
+
     private IEnumerator CoPlay(float speed)
     {
         if (speed < 0)
         {
             _director.time = _director.duration;
+        } else
+        {
+            _director.time = 0;
         }
 
         while ((speed < 0 && _director.time >0) || (speed > 0 && _director.time < _director.duration))
@@ -43,6 +52,7 @@ public class TimelinePlayer : MonoBehaviour
         if (speed < 0)
         {
             _director.time = TOLERANCE;
+            _director.Pause();  
             OnFinishedReverse.Invoke();
         }
         else
@@ -50,6 +60,7 @@ public class TimelinePlayer : MonoBehaviour
             _director.time = _director.duration - TOLERANCE;
             OnFinished.Invoke();
         }
+        _director.Pause();
 
         if (After != null)
         {

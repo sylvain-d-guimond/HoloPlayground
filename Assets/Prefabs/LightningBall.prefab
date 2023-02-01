@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 5688664951138776911}
   - component: {fileID: 5688664951138776908}
   - component: {fileID: 5688664951138776909}
-  - component: {fileID: 5688664951138776910}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -138,19 +137,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5688664951138776910
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688664951138776896}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5688664951911022185
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +148,6 @@ GameObject:
   - component: {fileID: 5688664951911022184}
   - component: {fileID: 5688664951911022197}
   - component: {fileID: 5688664951911022198}
-  - component: {fileID: 5688664951911022199}
   m_Layer: 0
   m_Name: Inner
   m_TagString: Untagged
@@ -235,19 +220,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &5688664951911022199
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688664951911022185}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5688664952096405586
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +236,7 @@ GameObject:
   - component: {fileID: 632593376806643641}
   - component: {fileID: 4670341990589521928}
   - component: {fileID: 7537350493364036097}
+  - component: {fileID: 5281585293374910766}
   m_Layer: 0
   m_Name: LightningBall
   m_TagString: Untagged
@@ -393,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3413f9f422326489afff53e2f7aec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Stage: 1
   OnActivate:
     m_PersistentCalls:
@@ -418,6 +392,45 @@ MonoBehaviour:
   OnThrown:
     m_PersistentCalls:
       m_Calls: []
+  OnCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5688664951138776896}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5688664951911022185}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5688664952096405599}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1749322309447819446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Smoothing: 0.1
   Delay: 2
+  _active: 0
 --- !u!114 &632593376806643641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +550,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecondsAveraged: 0.25
-  ForceMultiplier: 400
+  ForceMultiplier: 10
   OnThrow:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1749322309447819446}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!135 &5281585293374910766
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688664952096405586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}

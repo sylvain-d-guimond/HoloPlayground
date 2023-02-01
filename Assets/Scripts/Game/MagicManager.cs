@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ public class MagicManager : MonoBehaviour
 
     public UnityEvent OnActivate;
 
+    public List<ExplosionMap> Explosions;
     public List<Magic> Magic = new List<Magic>();
 
     private int counter;
@@ -75,4 +77,18 @@ public class MagicManager : MonoBehaviour
     {
         Magic.ForEach(magic => magic.Activate());
     }
+
+    public void Explode(Magic magic)
+    {
+        var explosion = Explosions.Where(x => x.Type == magic.Type).First().Explosion;
+        explosion.transform.position = magic.transform.position;
+        explosion.OnExplode.Invoke();
+    }
+}
+
+[Serializable]
+public struct ExplosionMap
+{
+    public MagicType Type;
+    public Explosion Explosion;
 }

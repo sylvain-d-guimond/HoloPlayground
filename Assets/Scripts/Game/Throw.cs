@@ -52,7 +52,7 @@ public class Throw : MonoBehaviour
             _rigidbody.detectCollisions = true;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
             transform.SetParent(_room, true);
-            _rigidbody.AddForce(velocity * ForceMultiplier);
+            _rigidbody.AddForce(velocity * ForceMultiplier, ForceMode.Impulse);
 
             var magic = GetComponent<Magic>();
             if (magic != null)

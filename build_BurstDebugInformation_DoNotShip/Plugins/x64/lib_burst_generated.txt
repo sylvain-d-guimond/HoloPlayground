@@ -218,6 +218,7 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.SDK.Experimental.Interactive.dll
+--root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.VisualEffectGraph.Runtime.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
@@ -232,8 +233,8 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.Services.SceneSystem.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
---root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.SlyUnityTools.dll
+--root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.dll
@@ -247,7 +248,6 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MetaQuestSupport.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
---root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.UXComponents.dll
@@ -579,6 +579,7 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.SDK.Experimental.Interactive.dll
+--root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.VisualEffectGraph.Runtime.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Scheduler.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Device.dll
@@ -593,8 +594,8 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.Services.SceneSystem.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.Threading.dll
---root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.SlyUnityTools.dll
+--root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Services.Core.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.dll
@@ -608,7 +609,6 @@ Library: lib_burst_generated
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.Subsystem.Registration.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.MetaQuestSupport.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
---root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll
 --root-assembly=C:\_GIT\HoloPlayground\Temp\StagingArea\Data\Managed\Microsoft.MixedReality.Toolkit.UXComponents.dll
