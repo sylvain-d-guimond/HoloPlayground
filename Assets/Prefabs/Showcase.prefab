@@ -136,8 +136,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05
-  m_Center: {x: 0, y: 0.03, z: 0}
+  m_Radius: 0.08
+  m_Center: {x: 0, y: 0.015, z: 0}
 --- !u!114 &2134279960551114039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 670981716436309516}
         m_TargetAssemblyTypeName: AnimationBoolTrigger, Unity.SlyUnityTools
         m_MethodName: set_Value
         m_Mode: 6
@@ -240,6 +240,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: AnimationBoolTrigger, Unity.SlyUnityTools
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 670981716436309516}
+        m_TargetAssemblyTypeName: AnimationBoolTrigger, Unity.SlyUnityTools
+        m_MethodName: set_Value
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -267,7 +291,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1713078299877153703}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AnimCall, Unity.SlyUnityTools
         m_MethodName: Call
         m_Mode: 1
@@ -576,7 +600,7 @@ PrefabInstance:
     - target: {fileID: 6008453687681504738, guid: 57bb31d7de260014890061a792f122c9, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 86703dc714e85814bb9e4f455c4594c0, type: 2}
+      objectReference: {fileID: 9100000, guid: f4d7a04a458c9384892fb63d5638e514, type: 2}
     - target: {fileID: 6581630571549894809, guid: 57bb31d7de260014890061a792f122c9, type: 3}
       propertyPath: m_text
       value: Coming soon!
@@ -603,6 +627,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57bb31d7de260014890061a792f122c9, type: 3}
+--- !u!114 &670981716436309516 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2614264291331370798, guid: 57bb31d7de260014890061a792f122c9, type: 3}
+  m_PrefabInstance: {fileID: 3244973090471196962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768553802373503909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e065233133c474290a337818d34f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4481516964436190952 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1385417886178713546, guid: 57bb31d7de260014890061a792f122c9, type: 3}
@@ -613,17 +648,3 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9009012124081398407, guid: 57bb31d7de260014890061a792f122c9, type: 3}
   m_PrefabInstance: {fileID: 3244973090471196962}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1713078299877153703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5768553802373503909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f485270d495263247af0211ad1f827b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Parameter: ComingSoonShown
-  Animator: {fileID: 0}

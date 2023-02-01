@@ -32,4 +32,4 @@ MonoBehaviour:
     keys:
     - BuildDeployWindow_AppLauncherModelLocation
     values:
-    - 
+    - Assets/Models/icono.glb
