@@ -1,18 +1,20 @@
 {
   "dependencies": {
     "com.bearlabs.slyholotools": {
-      "version": "file:C:/_GIT/SlyHoloTools",
+      "version": "https://github.com/sylvain-d-guimond/SlyHoloTools.git#3e8c7cd99e3c84d1007d2afdb8fb49979588d93b",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.microsoft.mixedreality.toolkit.foundation": "2.7.3"
-      }
+      },
+      "hash": "3e8c7cd99e3c84d1007d2afdb8fb49979588d93b"
     },
     "com.bearlabs.slyunitytools": {
-      "version": "file:C:/_GIT/SlyUnityTools",
+      "version": "https://github.com/sylvain-d-guimond/SlyUnityTools.git#2693c5bb3c3617f8cda64096a8b0242e47de48f5",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "2693c5bb3c3617f8cda64096a8b0242e47de48f5"
     },
     "com.microsoft.mixedreality.openxr": {
       "version": "file:MixedReality/com.microsoft.mixedreality.openxr-1.6.0.tgz",
