@@ -1,7 +1,8 @@
-using Microsoft.MixedReality.Toolkit.Utilities.Solvers;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MixedReality.Toolkit;
+using MixedReality.Toolkit.SpatialManipulation;
 
 public class ChangeSolverHandedness : MonoBehaviour
 {
@@ -9,16 +10,16 @@ public class ChangeSolverHandedness : MonoBehaviour
 
     public void SetLeft()
     {
-        Target.TrackedHandedness = Microsoft.MixedReality.Toolkit.Utilities.Handedness.Left;
+        Target.TrackedHandedness = Handedness.Left;
     }
 
     public void SetRight()
     {
-        Target.TrackedHandedness = Microsoft.MixedReality.Toolkit.Utilities.Handedness.Right;
+        Target.TrackedHandedness = Handedness.Right;
     }
 
     public void SetBoth()
     {
-        Target.TrackedHandedness = Microsoft.MixedReality.Toolkit.Utilities.Handedness.Both;
+        Target.TrackedHandedness = Handedness.Both;
     }
 }

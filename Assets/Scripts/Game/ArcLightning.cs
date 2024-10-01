@@ -41,7 +41,7 @@ public class ArcLightning : MonoBehaviour
         {
             if (UpdateEndPoint)
             {
-                var ray = new Ray(CameraCache.Main.transform.position, _gazeProvider.GazeDirection.normalized);
+                var ray = new Ray(Camera.main.transform.position, _gazeProvider.GazeDirection.normalized);
                 RaycastHit hitInfo;
                 LayerMask mask = ~0;
                 var damageMask = LayerMask.GetMask("Damage");
