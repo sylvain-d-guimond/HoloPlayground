@@ -10,16 +10,16 @@ public class ChangeSolverHandedness : MonoBehaviour
 
     public void SetLeft()
     {
-        Target.TrackedHandedness = Handedness.Left;
+        if (Target != null) Target.TrackedHandedness = Handedness.Left;
     }
 
     public void SetRight()
     {
-        Target.TrackedHandedness = Handedness.Right;
+        if (Target != null) Target.TrackedHandedness = Handedness.Right;
     }
 
     public void SetBoth()
     {
-        Target.TrackedHandedness = Handedness.Both;
+        if (Target != null) Target.TrackedHandedness = Handedness.Both;
     }
 }

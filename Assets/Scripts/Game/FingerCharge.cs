@@ -1,9 +1,7 @@
-using Microsoft.MixedReality.Toolkit.Utilities;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.Events;
+using MixedReality.Toolkit;
 
 public class FingerCharge : MonoBehaviour
 {

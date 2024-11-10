@@ -1,6 +1,3 @@
-using Microsoft.MixedReality.Toolkit;
-using Microsoft.MixedReality.Toolkit.Input;
-using Microsoft.MixedReality.Toolkit.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -54,7 +51,7 @@ public class Game : MonoBehaviour
     private GameStates _state;
     private bool _superCharged;
     private List<LightningBallDamage> _superChargedBalls = new List<LightningBallDamage>();
-    private IMixedRealityEyeGazeProvider _eyeGaze;
+    //private IMixedRealityEyeGazeProvider _eyeGaze;
 
     private List<Coroutine> _stateActions = new List<Coroutine>();
 
@@ -66,7 +63,7 @@ public class Game : MonoBehaviour
 
     private void Start()
     {
-        _eyeGaze = CoreServices.InputSystem?.EyeGazeProvider;
+        //_eyeGaze = CoreServices.InputSystem?.EyeGazeProvider;
     }
 
     public void SetState(GameStates state)
@@ -191,25 +188,25 @@ public class Game : MonoBehaviour
         {
             var mask = LayerMask.NameToLayer("Weapon");
 
-            if (_eyeGaze != null)
-            {
-                var ray = new Ray(CameraCache.Main.transform.position, _eyeGaze.GazeDirection.normalized);
-                var hits = Physics.RaycastAll(ray, 100f/*, mask*/);
-                //Debug.DrawRay(CameraCache.Main.transform.position, _eyeGaze.GazeDirection, Color.blue, 5f);
-                foreach (var hit in hits)
-                {
-                    if (hit.transform.gameObject.layer == mask)
-                    {
-                        var lightning = hit.transform.gameObject.GetComponentInChildren<LightningBallDamage>();
+            //if (_eyeGaze != null)
+            //{
+            //    var ray = new Ray(Camera.main.transform.position, _eyeGaze.GazeDirection.normalized);
+            //    var hits = Physics.RaycastAll(ray, 100f/*, mask*/);
+            //    //Debug.DrawRay(CameraCache.Main.transform.position, _eyeGaze.GazeDirection, Color.blue, 5f);
+            //    foreach (var hit in hits)
+            //    {
+            //        if (hit.transform.gameObject.layer == mask)
+            //        {
+            //            var lightning = hit.transform.gameObject.GetComponentInChildren<LightningBallDamage>();
 
-                        if (lightning != null)
-                        {
-                            lightning.SetSupercharged(true);
-                            _superChargedBalls.Add(lightning);
-                        }
-                    }
-                }
-            }
+            //            if (lightning != null)
+            //            {
+            //                lightning.SetSupercharged(true);
+            //                _superChargedBalls.Add(lightning);
+            //            }
+            //        }
+            //    }
+            //}
         }
     }
 }

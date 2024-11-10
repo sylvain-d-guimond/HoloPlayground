@@ -15,11 +15,11 @@ TagManager:
   - Stencil 2
   - EyeTarget
   - Damage
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Mask
+  - MaskedObject
+  - Overlay
+  - Mask2
+  - MaskedObject2
   - 
   - 
   - 

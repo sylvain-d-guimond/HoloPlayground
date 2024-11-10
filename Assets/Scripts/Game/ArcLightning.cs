@@ -1,6 +1,6 @@
-using Microsoft.MixedReality.Toolkit;
-using Microsoft.MixedReality.Toolkit.Input;
-using Microsoft.MixedReality.Toolkit.Utilities;
+//using Microsoft.MixedReality.Toolkit;
+//using Microsoft.MixedReality.Toolkit.Input;
+//using Microsoft.MixedReality.Toolkit.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -21,11 +21,11 @@ public class ArcLightning : MonoBehaviour
     public bool UpdateEndPoint = true;
 
     private bool _isOn;
-    private IMixedRealityEyeGazeProvider _gazeProvider;
+    //private IMixedRealityEyeGazeProvider _gazeProvider;
 
     private void Start()
     {
-        _gazeProvider = CoreServices.InputSystem?.EyeGazeProvider;
+        //_gazeProvider = CoreServices.InputSystem?.EyeGazeProvider;
     }
 
     public void SetActive(bool active)
@@ -37,24 +37,24 @@ public class ArcLightning : MonoBehaviour
 
     private void Update()
     {
-        if (_isOn && _gazeProvider != null)
-        {
-            if (UpdateEndPoint)
-            {
-                var ray = new Ray(Camera.main.transform.position, _gazeProvider.GazeDirection.normalized);
-                RaycastHit hitInfo;
-                LayerMask mask = ~0;
-                var damageMask = LayerMask.GetMask("Damage");
-                mask &= ~(damageMask);
-                Physics.Raycast(ray, out hitInfo, 15f, mask);
-                EndPos.position = hitInfo.point;
-            }
+        //if (_isOn && _gazeProvider != null)
+        //{
+        //    if (UpdateEndPoint)
+        //    {
+        //        var ray = new Ray(Camera.main.transform.position, _gazeProvider.GazeDirection.normalized);
+        //        RaycastHit hitInfo;
+        //        LayerMask mask = ~0;
+        //        var damageMask = LayerMask.GetMask("Damage");
+        //        mask &= ~(damageMask);
+        //        Physics.Raycast(ray, out hitInfo, 15f, mask);
+        //        EndPos.position = hitInfo.point;
+        //    }
 
-            Waypoint1.position = StartPos.position + (EndPos.position - StartPos.position) * (1f / 3f);
-            Waypoint2.position = StartPos.position + (EndPos.position - StartPos.position) * (2f / 3f);
+        //    Waypoint1.position = StartPos.position + (EndPos.position - StartPos.position) * (1f / 3f);
+        //    Waypoint2.position = StartPos.position + (EndPos.position - StartPos.position) * (2f / 3f);
 
-            Waypoint1.Rotate(Waypoint1Rotation * Time.deltaTime, Space.Self);
-            Waypoint2.Rotate(Waypoint2Rotation * Time.deltaTime, Space.Self);
-        }
+        //    Waypoint1.Rotate(Waypoint1Rotation * Time.deltaTime, Space.Self);
+        //    Waypoint2.Rotate(Waypoint2Rotation * Time.deltaTime, Space.Self);
+        //}
     }
 }

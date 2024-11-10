@@ -16,7 +16,7 @@ public class MagicManager : MonoBehaviour
 
     private int counter;
 
-    private void Start()
+    public MagicManager()
     {
         Instance = this;
     }
