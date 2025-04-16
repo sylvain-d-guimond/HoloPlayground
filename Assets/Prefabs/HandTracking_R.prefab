@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 200658400}
-  - component: {fileID: 200658401}
+  - component: {fileID: 6616265426259576820}
   m_Layer: 0
-  m_Name: Palm_L
+  m_Name: Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &200658401
+--- !u!114 &6616265426259576820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,17 +42,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 200658399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 2
-  Handedness: 1
-  Position: 1
-  Rotation: 1
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 0
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0
 --- !u!1 &317546279
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317546280}
   m_Layer: 0
-  m_Name: AtopPalm_L
+  m_Name: AtopPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,9 +91,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7080554941735115049}
-  - component: {fileID: 7080554941735115050}
+  - component: {fileID: 1683647215695117405}
   m_Layer: 0
-  m_Name: Middle_L
+  m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +114,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7080554941735115050
+--- !u!114 &1683647215695117405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,17 +123,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7080554941735115048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 16
-  Handedness: 1
-  Position: 1
-  Rotation: 0
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 0
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0
 --- !u!1 &7080554942198687553
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,9 +141,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7080554942198687554}
-  - component: {fileID: 7080554942198687555}
+  - component: {fileID: 6316778265862647024}
   m_Layer: 0
-  m_Name: Index_L
+  m_Name: Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +164,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7080554942198687555
+--- !u!114 &6316778265862647024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,17 +173,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7080554942198687553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 11
-  Handedness: 1
-  Position: 1
-  Rotation: 0
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 0
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0
 --- !u!1 &7080554942304851360
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,9 +191,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7080554942304851361}
-  - component: {fileID: 7080554942304851362}
+  - component: {fileID: 8071706235470452178}
   m_Layer: 0
-  m_Name: Ring_L
+  m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -220,7 +214,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7080554942304851362
+--- !u!114 &8071706235470452178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,17 +223,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7080554942304851360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 21
-  Handedness: 1
-  Position: 1
-  Rotation: 0
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 0
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0
 --- !u!1 &7080554942421361098
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,9 +241,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7080554942421361099}
-  - component: {fileID: 7080554942421361092}
+  - component: {fileID: 6892662213107877633}
   m_Layer: 0
-  m_Name: Thumb_L
+  m_Name: Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,7 +264,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7080554942421361092
+--- !u!114 &6892662213107877633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,17 +273,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7080554942421361098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 6
-  Handedness: 1
-  Position: 1
-  Rotation: 0
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 5
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0
 --- !u!1 &7080554943244174472
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7080554943244174473}
   m_Layer: 0
-  m_Name: Left Hand
+  m_Name: HandTracking_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -338,9 +328,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7080554943284815329}
-  - component: {fileID: 7080554943284815330}
+  - component: {fileID: 5405071337615397207}
   m_Layer: 0
-  m_Name: Pinky_L
+  m_Name: Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +351,7 @@ Transform:
   m_Father: {fileID: 7080554943244174473}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7080554943284815330
+--- !u!114 &5405071337615397207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,14 +360,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7080554943284815328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a73bf234dd84a147b20b602b68c8b1c, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2a8d0053b7d3e4d82d6169d852feff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackedJoint: 26
-  Handedness: 1
-  Position: 1
-  Rotation: 0
-  PositionDamping: 0.1
-  RotationDamping: 0.1
-  PositionOffset: {x: 0, y: 0, z: 0}
-  RotationOffset: {x: 0, y: 0, z: 0}
+  jointPoseSource:
+    hand: 0
+    joint: 0
+  migratedSuccessfully: 1
+  hand: 0
+  joint: 0

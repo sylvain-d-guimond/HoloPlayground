@@ -2,7 +2,7 @@
   "dependencies": {
     "com.atteneder.gltfast": "https://github.com/atteneder/glTFast.git#v4.8.3",
     "com.atteneder.ktx": "https://github.com/atteneder/KtxUnity.git#v2.1.2",
-    "com.bearlabs.slyholotools": "https://github.com/sylvain-d-guimond/SlyHoloTools.git#303cb4b651128eb71a9c58421b4e6f6a22556ab2",
+    "com.bearlabs.slyholotools": "file:C:/_GIT/SlyHoloTools",
     "com.bearlabs.slyunitytools": "https://github.com/sylvain-d-guimond/SlyUnityTools.git#7b02b718a2d1918f1d7049b95e9b240f2435cdd7",
     "com.bearlabs.slyvfx": "file:C:/_GIT/SlyVFX",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",

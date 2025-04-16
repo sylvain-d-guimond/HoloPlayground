@@ -13,6 +13,7 @@ public class MagicManager : MonoBehaviour
 
     public List<ExplosionMap> Explosions;
     public List<Magic> Magic = new List<Magic>();
+    public List<State> Spawners;
 
     private int counter;
 

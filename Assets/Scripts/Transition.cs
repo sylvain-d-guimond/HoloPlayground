@@ -1,25 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Transition : MonoBehaviour
 {
     public float Smoothing;
     public float Delay;
+    public Transform Target;
 
     [SerializeField]
-    private bool _active;
-    private float _startTime;
+    private float startTime;
+    private ParentConstraint parentConstraint;
 
+    private void Awake()
+    {
+        parentConstraint = GetComponent<ParentConstraint>();
+    }
+
+    private void OnEnable()
+    {
+        Set(Target);
+    }
     public void Set(Transform parent)
     {
         //Debug.Log($"Transition, scale before:{transform.lossyScale}, {transform.lossyScale.x}");
         var scale = transform.lossyScale;
-        transform.SetParent(parent, true);
         //transform.SetGlobalScale(scale);
         //Debug.Log($"Transition, scale after:{transform.lossyScale}, {transform.lossyScale.x}");
-        _active = true;
-        _startTime = Time.time;
+        startTime = Time.time;
         //StartCoroutine(SetScale(scale));
     }
 
@@ -34,16 +43,16 @@ public class Transition : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (_active)
+        if (enabled)
         {
-            if (Time.time > Delay + _startTime)
+            if (Time.time > Delay + startTime)
             {
-                transform.localPosition = Vector3.zero;
-                _active = false;
+                parentConstraint.constraintActive = true;
+                enabled = false;
             }
             else
             {
-                transform.localPosition = Vector3.Lerp(transform.localPosition, Vector3.zero, Time.deltaTime / Smoothing);
+                transform.position = Vector3.Lerp(transform.position, Target.position, Time.deltaTime / Smoothing);
             }
         }
 

@@ -105,7 +105,7 @@ public class TutorialController : MonoBehaviour
     public void SpawnLightningBall()
     {
         Spawner.SpawnObject = LightningBall;
-        var go = Spawner.Activate();
+        var go = Spawner.Spawn();
         var magic = go.GetComponent<Magic>();
 
         magic.OnAppeared.AddListener(() => {
@@ -125,7 +125,7 @@ public class TutorialController : MonoBehaviour
     public void SpawnPracticeLightningBall()
     {
         Spawner.SpawnObject = LightningBall;
-        var go = Spawner.Activate();
+        var go = Spawner.Spawn();
         var magic = go.GetComponent<Magic>();
 
         magic.OnAppeared.AddListener(() => {
@@ -145,7 +145,7 @@ public class TutorialController : MonoBehaviour
     public void SpawnFireBall()
     {
         Spawner.SpawnObject = FireBall;
-        var go = Spawner.Activate();
+        var go = Spawner.Spawn();
         var magic = go.GetComponent<Magic>();
 
         magic.OnAppeared.AddListener(() => {
@@ -165,7 +165,7 @@ public class TutorialController : MonoBehaviour
     public void SpawnPracticeFireBall()
     {
         Spawner.SpawnObject = FireBall;
-        var go = Spawner.Activate();
+        var go = Spawner.Spawn();
         var magic = go.GetComponent<Magic>();
 
         magic.OnAppeared.AddListener(() => {

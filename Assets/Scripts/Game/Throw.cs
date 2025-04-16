@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,9 @@ public class Throw : MonoBehaviour
     private Rigidbody _rigidbody;
     private bool _ready;
     private Transform _room;
-
+    [SerializeField] Vector3 throwingForce;
+    [SerializeField] Vector3 velocity;
+    
     private Queue<Tuple<float, Vector3>> _positions = new Queue<Tuple<float, Vector3>>();
 
     public void Ready()
@@ -47,12 +50,12 @@ public class Throw : MonoBehaviour
             Debug.Log($"{gameObject.name} thrown at velocity {velocity} force {velocity * ForceMultiplier} valueCount {count}");
 
             _rigidbody = gameObject.AddComponent<Rigidbody>();
-            if (HandDebugPanel.Instance != null) HandDebugPanel.Instance.Rigidbody = _rigidbody;
             _rigidbody.useGravity = false;
             _rigidbody.detectCollisions = true;
             _rigidbody.collisionDetectionMode = CollisionDetectionMode.Discrete;
             transform.SetParent(_room, true);
-            _rigidbody.AddForce(velocity * ForceMultiplier, ForceMode.Impulse);
+            throwingForce = velocity * ForceMultiplier;
+            _rigidbody.AddForce(throwingForce, ForceMode.Impulse);
 
             var magic = GetComponent<Magic>();
             if (magic != null)
@@ -78,5 +81,16 @@ public class Throw : MonoBehaviour
                 _positions.Dequeue();
             }
         }
+
+        if (_rigidbody != null)
+        {
+            velocity = _rigidbody.velocity;
+        }
+    }
+
+    [Button("push")]
+    private void push()
+    {
+        _rigidbody.AddForce(new Vector3(0, 0, 1), ForceMode.Impulse);
     }
 }

@@ -23,15 +23,14 @@
       "hash": "7747a48d5e994db800b4c60a0a8b95a5ae2ce39f"
     },
     "com.bearlabs.slyholotools": {
-      "version": "https://github.com/sylvain-d-guimond/SlyHoloTools.git#303cb4b651128eb71a9c58421b4e6f6a22556ab2",
+      "version": "file:C:/_GIT/SlyHoloTools",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "org.mixedrealitytoolkit.core": "3.0.0",
         "org.mixedrealitytoolkit.input": "3.0.0",
         "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm"
-      },
-      "hash": "303cb4b651128eb71a9c58421b4e6f6a22556ab2"
+      }
     },
     "com.bearlabs.slyunitytools": {
       "version": "https://github.com/sylvain-d-guimond/SlyUnityTools.git#7b02b718a2d1918f1d7049b95e9b240f2435cdd7",

@@ -6,6 +6,6 @@ public class ActivateMagic : MonoBehaviour
 {
     public void Call()
     {
-        MagicManager.Instance.GetPreparing().Activate();
+        MagicManager.Instance.GetPreparing().SetReady();
     }
 }

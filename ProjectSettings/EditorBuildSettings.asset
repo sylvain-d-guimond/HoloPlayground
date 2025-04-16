@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MRTK3/CanvasExample.unity
-    guid: 24da6686da5c91c40add71f019626f80
-  - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/TrainingMRTK3.unity
+    guid: da35dddeb31aeba49836b99076e2ea6f
   m_configObjects:
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0fc2ad0561552c043aa7440838579f9f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 23db74ce8db445240b9c5c344e2db70b, type: 2}

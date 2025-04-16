@@ -7,6 +7,8 @@ public class Magic : MonoBehaviour
 {
     public MagicType Type;
     public MagicStage Stage = MagicStage.Prepare;
+    public Explosion Explosion;
+    public HandednessSwitcher HandednessSwitcher;
     public UnityEvent OnActivate;
     public UnityEvent OnAppeared;
     public UnityEvent OnReady;
@@ -64,7 +66,10 @@ public class Magic : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        MagicManager.Instance.Explode(this);
+        //MagicManager.Instance.Explode(this);
+        var go = Instantiate(Explosion, Room.Instance.transform);
+        go.transform.position = transform.position;
+        go.OnExplode.Invoke();
 
         StartCoroutine(CoDelayedDestroy(0));
     }

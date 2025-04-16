@@ -2,47 +2,51 @@ using UnityEngine;
 using UnityEngine.VFX;
 using UnityEngine.Events;
 using MixedReality.Toolkit;
+using NaughtyAttributes;
 
-public class FingerCharge : MonoBehaviour
+public class FingerCharge : MonoBehaviour, IHandedComponent
 {
     public VisualEffect Effect;
     public float DesiredAngle = 130f;
     public float MinLoadCharge = 0.7f;
     public float LoadDuration = 3f;
-    public Handedness Hand;
 
     public UnityEvent OnLoaded;
+    public Handedness Hand { get => hand; set { hand = value; } }
 
-    private bool _charging;
-    [SerializeField] float _load;
+    private bool charging;
+    [SerializeField, ReadOnly] float load;
+    private Handedness hand;
+
 
     private void OnEnable()
     {
-        _charging = true;
+        charging = true;
     }
 
 
     void Update()
     {
-        if (_charging)
+        if (charging)
         {
             var hand = HandManager.Instance;
-            var angle = hand.FingerAngle(Hand, Fingers.All);
+            var angle = hand.FingerAngle(this.hand, Fingers.All);
             var charge = 1 - Mathf.Abs(DesiredAngle - angle) / DesiredAngle;
+            //Debug.Log($"FingerCharge: Hand:{this.hand} angle:{angle} charge:{charge}");
 
-            _load = Mathf.Clamp01(_load + (charge > MinLoadCharge ? 1 : -1) * (Time.deltaTime / LoadDuration));
+            load = Mathf.Clamp01(load + (charge > MinLoadCharge ? 1 : -1) * (Time.deltaTime / LoadDuration));
 
-            if (Mathf.Approximately(_load, 1f))
+            if (Mathf.Approximately(load, 1f))
             {
-                _load = 1f;
+                load = 1f;
                 charge = 1f;
-                _charging = false;
+                charging = false;
                 if (DebugMode.instance.DebugLevel <= DebugLevels.Debug) Debug.Log($"Load from {gameObject.name} triggering {OnLoaded.GetPersistentEventCount()} events");
                 OnLoaded.Invoke();
                 if (DebugMode.instance.DebugLevel <= DebugLevels.Debug) Debug.Log("Loaded");
             }
 
-            Effect.SetFloat("Load", _load);
+            Effect.SetFloat("Load", load);
             Effect.SetFloat("Charge", charge);
         }
     }
