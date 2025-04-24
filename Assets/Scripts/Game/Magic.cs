@@ -42,12 +42,14 @@ public class Magic : MonoBehaviour
     public void SetReady()
     {
         this.Stage = MagicStage.Ready;
+        MagicManager.Instance.MagicReady(this);
         OnReady.Invoke();
     }
 
     public void Thrown()
     {
         this.Stage = MagicStage.Thrown;
+        MagicManager.Instance.MagicThrown(this);
         OnThrown.Invoke();
     }
 
