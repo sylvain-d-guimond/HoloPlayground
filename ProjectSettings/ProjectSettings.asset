@@ -142,7 +142,11 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1
   preloadedAssets:
-  - {fileID: 11400000, guid: 750464f4991894c458a9ecbf3f751068, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: c677e5c4eb85b7849a8da406775c299d, type: 2}
+  - {fileID: -7840367168571104451, guid: 23db74ce8db445240b9c5c344e2db70b, type: 2}
+  - {fileID: 11400000, guid: 0fc2ad0561552c043aa7440838579f9f, type: 2}
+  - {fileID: -2605559207954995898, guid: 3206bc849330bbe4495df30b9cc1446b, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -776,10 +780,10 @@ PlayerSettings:
   metroPackageName: HoloPlayground
   metroPackageVersion: 1.0.1.0
   metroCertificatePath: Assets/WSATestCertificate.pfx
-  metroCertificatePassword: 54;5;5;nN-
+  metroCertificatePassword: 54;45'54;45n
   metroCertificateSubject: BearLabs
   metroCertificateIssuer: BearLabs
-  metroCertificateNotAfter: 006e46d14052db01
+  metroCertificateNotAfter: 00204ba721d4dc01
   metroApplicationDescription: Holo Playground
   wsaImages: {}
   metroTileShortName: _HoloPlayground
