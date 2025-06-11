@@ -6,7 +6,7 @@
     "com.bearlabs.slyunitytools": "https://github.com/sylvain-d-guimond/SlyUnityTools.git#7b02b718a2d1918f1d7049b95e9b240f2435cdd7",
     "com.bearlabs.slyvfx": "file:C:/_GIT/SlyVFX",
     "com.dbrizov.naughtyattributes": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
-    "com.meta.xr.sdk.core": "74.0.2",
+    "com.meta.xr.sdk.core": "76.0.1",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.10.0.tgz",
     "com.microsoft.mrtk.graphicstools.unity": "file:MixedReality/com.microsoft.mrtk.graphicstools.unity-0.7.1.tgz",
     "com.microsoft.mrtk.tts.windows": "file:MixedReality/com.microsoft.mrtk.tts.windows-1.0.4.tgz",

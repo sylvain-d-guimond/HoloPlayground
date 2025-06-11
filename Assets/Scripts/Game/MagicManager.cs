@@ -10,12 +10,15 @@ public class MagicManager : MonoBehaviour
     public static MagicManager Instance;
 
     public UnityEvent OnActivate;
+    public UnityEvent OnReady;
+    public UnityEvent OnThrown;
 
     public List<ExplosionMap> Explosions;
     public List<Magic> Magic = new List<Magic>();
     public List<State> Spawners;
 
     private int counter;
+
 
     public MagicManager()
     {
@@ -37,6 +40,13 @@ public class MagicManager : MonoBehaviour
     public void Remove(Magic magic)
     {
         Magic.Remove(magic);
+    }
+
+    public void StopCurrent()
+    {
+        var magic = GetPreparing();
+
+        if (magic != null) { Destroy(magic.gameObject); }  
     }
 
     public void Clear()
@@ -69,9 +79,13 @@ public class MagicManager : MonoBehaviour
 
     public Magic GetPreparing()
     {
-        var magic = Magic.Where((magic) => { return magic.Stage == MagicStage.Prepare; }).First();
-        Debug.Log($"Get preparing: {magic.name}");
-        return magic;
+        var magic = Magic.Where((magic) => { return magic.Stage == MagicStage.Prepare; });
+        if (magic.Count() > 0)
+        {
+            Debug.Log($"Get preparing: {magic.First().name}");
+            return magic.First();
+        }
+        return null;
     }
 
     public void ActivateMagic()
@@ -84,6 +98,16 @@ public class MagicManager : MonoBehaviour
         var explosion = Explosions.Where(x => x.Type == magic.Type).First().Explosion;
         explosion.transform.position = magic.transform.position;
         explosion.OnExplode.Invoke();
+    }
+
+    internal void MagicReady(Magic magic)
+    {
+        OnReady.Invoke();
+    }
+
+    internal void MagicThrown(Magic magic)
+    {
+        OnThrown.Invoke();
     }
 }
 
