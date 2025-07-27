@@ -14,6 +14,7 @@ public class Magic : MonoBehaviour
     public UnityEvent OnReady;
     public UnityEvent OnThrown;
     public UnityEvent OnCollision;
+    public float SelfDestruct = -1f;
     public bool StaticInstance;
 
     private void OnEnable()
@@ -51,6 +52,18 @@ public class Magic : MonoBehaviour
         this.Stage = MagicStage.Thrown;
         MagicManager.Instance.MagicThrown(this);
         OnThrown.Invoke();
+
+        if (SelfDestruct > 0f)
+        {
+            StartCoroutine(CoSelfDestruct());
+        }
+    }
+
+    private IEnumerator CoSelfDestruct()
+    {
+        yield return new WaitForSeconds(SelfDestruct);
+
+        OnTriggerEnter(GetComponent<Collider>());
     }
 
     public void Destroy()

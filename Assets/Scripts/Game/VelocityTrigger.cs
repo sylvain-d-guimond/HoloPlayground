@@ -30,12 +30,17 @@ public class VelocityTrigger : MonoBehaviour, IHandedComponent
         _resetVelocity = ResetMaxVelocity();
     }
 
+    private void OnDisable()
+    {
+        _init = false;
+    }
+
     public void SetActive(bool active)
     {
         if (Active = active) _init = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Active)
         {
@@ -64,7 +69,7 @@ public class VelocityTrigger : MonoBehaviour, IHandedComponent
     {
         while (Application.isPlaying)
         {
-            await Task.Delay(1000);
+            await Task.Delay(5000);
             _maxVelocity = 0;
         }
     }
