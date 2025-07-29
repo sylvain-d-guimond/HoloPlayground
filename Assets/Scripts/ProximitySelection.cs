@@ -49,7 +49,7 @@ public class ProximitySelection : MonoBehaviour
 
     public void Select()
     {
-        currentSelection.Action.Invoke();
+        currentSelection?.Action.Invoke();
     }
 }
 
