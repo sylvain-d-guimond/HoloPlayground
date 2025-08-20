@@ -474,8 +474,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: d7179670dfcde8844a4b46cc08734534, type: 2}
     - target: {fileID: 3538676005348672636, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4566431538783871485}
+    - target: {fileID: 3538676005348672636, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538676005348672636, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
       propertyPath: interactable
@@ -571,6 +575,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b4c9883ef7eafbf42a2366f510743f36, type: 2}
+    - target: {fileID: 5293948845423905903, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5572466351762964349, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
       propertyPath: m_Colliders.Array.size
       value: 1
@@ -579,6 +587,10 @@ PrefabInstance:
       propertyPath: m_Colliders.Array.data[0]
       value: 
       objectReference: {fileID: 3496169386887943572}
+    - target: {fileID: 5572466351762964349, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6269505899227792336, guid: c25d8f2d22117bd40ad824684551fbde, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.04
@@ -611,8 +623,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9362d7ed090392f418a3ad9340fc1837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform1: {fileID: 0}
-  transform2: {fileID: 3496169387441066857}
+  references: []
+  target: {fileID: 3496169387441066857}
   minDistance: 0.075
   maxDistance: 0.15
   minValue: 0.99
@@ -632,6 +644,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  distance: 0
 --- !u!114 &8514296057284806871
 MonoBehaviour:
   m_ObjectHideFlags: 0

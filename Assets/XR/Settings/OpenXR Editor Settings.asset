@@ -21,4 +21,4 @@ MonoBehaviour:
     - com.microsoft.openxr.featureset.hololens
   - featureSets:
     - com.meta.openxr.featureset.metaxr
-  m_vulkanAdditionalGraphicsQueue: 0
+  m_vulkanAdditionalGraphicsQueue: 1
