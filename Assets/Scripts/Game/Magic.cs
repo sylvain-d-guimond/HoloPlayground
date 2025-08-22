@@ -63,7 +63,7 @@ public class Magic : MonoBehaviour
     {
         yield return new WaitForSeconds(SelfDestruct);
 
-        OnTriggerEnter(GetComponent<Collider>());
+        Explode();
     }
 
     public void Destroy()
@@ -71,15 +71,15 @@ public class Magic : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void Explode()
     {
         OnCollision.Invoke();
         GetComponent<Rigidbody>().velocity = Vector3.zero;
 
-        if (other.GetComponent<PracticeTarget>() != null)
-        {
-            Destroy(other.gameObject);
-        }
+        //if (other.GetComponent<PracticeTarget>() != null)
+        //{
+        //    Destroy(other.gameObject);
+        //}
 
         //MagicManager.Instance.Explode(this);
         var go = Instantiate(Explosion, Room.Instance.transform);
@@ -87,6 +87,7 @@ public class Magic : MonoBehaviour
         go.OnExplode.Invoke();
 
         StartCoroutine(CoDelayedDestroy(0));
+
     }
 
     private IEnumerator CoDelayedDestroy(int delay)

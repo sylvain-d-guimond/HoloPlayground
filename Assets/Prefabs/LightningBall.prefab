@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Delay: 0.5
+  OneFrame: 0
   OnCall:
     m_PersistentCalls:
       m_Calls:
@@ -710,13 +711,14 @@ GameObject:
   - component: {fileID: 7206404462842447143}
   - component: {fileID: 1749322309447819446}
   - component: {fileID: 7537350493364036097}
+  - component: {fileID: 1859425519049316154}
   - component: {fileID: 5281585293374910766}
   - component: {fileID: -8548739512696988249}
   - component: {fileID: 4894408995391766631}
   - component: {fileID: 6107255481674242019}
   m_Layer: 0
   m_Name: LightningBall
-  m_TagString: Untagged
+  m_TagString: Damaging
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,6 +893,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  SelfDestruct: -1
   StaticInstance: 0
 --- !u!114 &1749322309447819446
 MonoBehaviour:
@@ -951,6 +954,20 @@ MonoBehaviour:
         m_CallState: 2
   throwingForce: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
+--- !u!114 &1859425519049316154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5688664952096405586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7086e0a1cc309464ca94bf42fe117fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 0.1
+  DamageType: 0
 --- !u!135 &5281585293374910766
 SphereCollider:
   m_ObjectHideFlags: 0

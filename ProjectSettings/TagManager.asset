@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Damaging
+  - Damageable
+  - SpatiialPerception
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Overlay
   - Mask2
   - MaskedObject2
-  - 
+  - Practice
   - 
   - 
   - 

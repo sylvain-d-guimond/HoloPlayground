@@ -11,7 +11,8 @@ public class BaseCharacter : MonoBehaviour
     public float Health = 1f;
     public float Defense = 0f;
 
-    public FloatEvent OnHealthChanged;
+    public UnityEvent OnSpawn;
+    public UnityEvent<float> OnHealthChanged;
     public UnityEvent OnDeath;
 
     private int _id = idCounter++;
@@ -19,6 +20,11 @@ public class BaseCharacter : MonoBehaviour
     public bool Alive { get => _isAlive; }
 
     protected bool _isAlive = true;
+
+    protected virtual void Start()
+    {
+        OnSpawn.Invoke();
+    }
 
     protected virtual void Update()
     {
@@ -50,6 +56,3 @@ public class BaseCharacter : MonoBehaviour
         return $"{name} id: {_id} health:{Health} def:{Defense} alive:{(Alive?"yes":"no")}";
     }
 }
-
-[Serializable]
-public class FloatEvent : UnityEvent<float> { }

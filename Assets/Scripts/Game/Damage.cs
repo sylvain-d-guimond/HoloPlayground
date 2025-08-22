@@ -5,11 +5,12 @@ using UnityEngine;
 public class Damage : MonoBehaviour
 {
     public float Value;
+    public DamageTypes DamageType;
 
     protected Dictionary<GameObject, BaseCharacter> _colliding = new Dictionary<GameObject, BaseCharacter>();
     protected List<GameObject> _keys = new List<GameObject>();
 
-    protected virtual BaseCharacter OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         var target = other.gameObject.GetComponent<BaseCharacter>();
         if (target != null && target.Alive)
@@ -18,32 +19,39 @@ public class Damage : MonoBehaviour
             {
                 _colliding.Add(other.gameObject, target);
                 Debug.Log($"{name} from {transform.parent.name} begins collision with {target}");
+
+                if (DamageType== DamageTypes.Instant)
+                {
+                    target.Damage(Value);
+                    Debug.Log($"{name} from {transform.parent.name} damaged {target} by {Value} at {Time.time}");
+                }
             }
-
-            return target;
         }
 
-        if (other.GetComponent<PracticeTarget>() != null)
+        PracticeTarget pt;
+        if ((pt = other.GetComponent<PracticeTarget>()) != null)
         {
-            Destroy(other.gameObject);
+            pt.Hit();
         }
 
-        return null;
+        Magic magic = GetComponent<Magic>();
+        if (magic != null)
+        {
+            magic.Explode();
+        }
     }
     protected virtual void OnTriggerStay(Collider other)
     {
     }
 
-    protected virtual BaseCharacter OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (_colliding.ContainsKey(other.gameObject))
         {
             var exiting = _colliding[other.gameObject];
             _colliding.Remove(other.gameObject);
             Debug.Log($"{name} from {transform.parent.name} ends collision with {exiting}");
-            return exiting;
         }
-        return null;
     }
 
     protected virtual void OnDisable()
@@ -64,11 +72,17 @@ public class Damage : MonoBehaviour
         }
         _keys.Clear();
 
+        if (DamageType == DamageTypes.Constant)
+            foreach (var target in _colliding.Keys)
+            {
+                _colliding[target].Damage(Value * Time.deltaTime);
+                Debug.Log($"{name} from {transform.parent.name} damaged {target} by {Value * Time.deltaTime} at {Time.time}");
+            }
+
+        //Clear the dead ones
         var dead = new List<GameObject>();
         foreach (var target in _colliding.Keys)
         {
-            _colliding[target].Damage(Value * Time.deltaTime);
-            Debug.Log($"{name} from {transform.parent.name} damaged {target} by {Value * Time.deltaTime} at {Time.time}");
             if (!_colliding[target].Alive) dead.Add(target);
         }
 
@@ -77,4 +91,10 @@ public class Damage : MonoBehaviour
             _colliding.Remove(ded);
         }
     }
+}
+
+public enum DamageTypes
+{
+    Instant,
+    Constant
 }
